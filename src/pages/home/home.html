@@ -1,14 +1,19 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Users
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+	<ul>
+		<li *ngFor="let user of users | async">
+			{{ user.nome }}
+		</li>
+	</ul>
+
+	<ion-buttons>
+		<button ion-button block round (click)="teste()">Teste</button>
+	</ion-buttons>
 </ion-content>
